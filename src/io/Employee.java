@@ -58,15 +58,15 @@ public class Employee implements Serializable {
     }
 
 
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", salary=" + salary +
-                ", job='" + job + '\'' +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Employee{" +
+//                "name='" + name + '\'' +
+//                ", age=" + age +
+//                ", salary=" + salary +
+//                ", job='" + job + '\'' +
+//                '}';
+//    }
 
 
 }
