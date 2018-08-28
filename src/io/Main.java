@@ -2,34 +2,47 @@ package io;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.TreeMap;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
 
 
 
-        ArrayList<Employee> employees = new ArrayList<>();
+        List<Employee> employees = new ArrayList<>();
         Employee employee = new Employee();
-        employee.save(new Employee("Bhf",26,37000,"Спец1"));
-//
-//        employees.add(new Employee("Мария",15,33000,"Художник"));
-//        employees.add(new Employee("Антон",14,33000,"Юрист"));
-//        employees.add(new Employee("Кирилл1",26,37000,"Специалист1"));
-//
-//        try (
-//            ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream("employee.dat"))) {
-//                objectOutputStream.writeObject(employees);
-//            } catch (IOException ex) {
-//            System.out.println(ex.getMessage());
+
+//        Задание a
+//        employee.save(new Employee("Стаст",26,87000,"Java Developer"));
+
+//        Задание b
+//        employee.delete(new Employee("Стаст",26,87000,"Java Developer"));
+
+//        Задание c
+//        System.out.println(employee.getByName("Кирилл1"));
+
+//        Задание d
+//        List listEmployees = employee.getByJob("Художник");
+//        for(Object o: listEmployees){
+//            System.out.println(o);
 //        }
 
-        ArrayList<Employee> newEmployees= null;
-        try(ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream("employee.dat"))){
-            newEmployees = (ArrayList<Employee>)objectInputStream.readObject();
-        }catch (Exception ex){
-            System.out.println(ex.getMessage());
-        }
+//        Задание f
+//          employee.saveOrUpdate(new Employee("Мария1",18,18000,"Художник"));
+
+//        Задание e
+//            employee.changeAllWork("Художник", "Программист");
+
+
+//         Здесь можно указать своих сотрудников
+//        employees.add(new Employee("Мария",25,33000,"Художник"));
+//        employees.add(new Employee("Антон",24,33000,"Юрист"));
+//        employees.add(new Employee("Кирилл",26,37000,"Специалист"));
+//        employees.add(new Employee("Артём",25,33000,"Художник"));
+//
+//        employee.write(employees);
+
+        List newEmployees = employee.read();
 
         for(Object o: newEmployees){
             System.out.println(o);
